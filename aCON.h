@@ -105,7 +105,7 @@ void updating_network(){
             // create a new connection
             //addNewConnection(prev_on_interval_id,curr_on_interval_id );
         //  }else{
-            Serial.println ("ADD NEW WEIGHT   ++++++++++++++ : ");
+            //Serial.println ("ADD NEW WEIGHT   ++++++++++++++ : ");
             //allCONNECTIONS[parsed_c_id]->weight += 1;
        //   }
 

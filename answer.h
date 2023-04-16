@@ -1,7 +1,7 @@
 
 bool is_playing_answer = false;
 
-int node_answer_buffer[32];
+int node_answer_buffer[12];
 int answer_buffer_size = 0;
 int curr_playhead = 0;
 
@@ -26,7 +26,7 @@ void createAnswerPlaylistBuffer(int _root_node_id){
     int _prev_node_id = _root_node_id;
 
     // create 6er answer! chain
-    for(int i=1;i<30;i++){
+    for(int i=1;i<10;i++){
 
       // get node id of most prominent connected node!
       int _next_node_id = allNODES[ _prev_node_id ].returnRandomConnectedNodeWeighted();
@@ -38,11 +38,13 @@ void createAnswerPlaylistBuffer(int _root_node_id){
       }
     }
 
+    /*
      Serial.println(" ----------ANSWER ------------------ ");
      Serial.print(" init node id: ");  
      Serial.println( node_answer_buffer[0] );
      Serial.print(" answer_len: ");  
      Serial.println( answer_buffer_size );
+     */
     
      
 }
@@ -117,12 +119,14 @@ void play_answer(){
            // todo > tick phase applied to lenth of note  
             if(tick>next_playhead_time_edge){
                 curr_playhead++;
+               
+               /*
                 Serial.print("play item: ");
                 Serial.print(curr_playhead);
                 Serial.print(" :: with node_id: ");
 
                 Serial.println(node_answer_buffer[curr_playhead]);
-                
+                */
                 tick =0;
 
                 next_playhead_time_edge = allNODES[ node_answer_buffer[curr_playhead] ].time_val/10 + 6;

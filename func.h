@@ -100,7 +100,7 @@ int return_ID_of_MostConnected_Node( ) {
  
 
 
-  void  send_data_via_serial(){
+  void send_data_via_serial(){
 
        Serial.print("init \n");
       
@@ -142,12 +142,13 @@ int return_ID_of_MostConnected_Node( ) {
                         allCS[connection_buffer_count].sid = prev_closestNodeID;
                         allCS[connection_buffer_count].oid = curr_closestNodeID;
           
+                        /*
                         Serial.println(" ------------------------------------------ ");
                         Serial.print(" create new connection:  ");
                         Serial.println( allCS[connection_buffer_count].sid );
                         Serial.println( allCS[connection_buffer_count].oid );
                       //  Serial.println(" ------------------------------------------ ");
-
+*/
   
                       // link the connection to the subject NODE!
                         if(allNODES[prev_closestNodeID].con_buff_count< node_size){
@@ -161,7 +162,7 @@ int return_ID_of_MostConnected_Node( ) {
                 }
 
       }else{
-           Serial.println(" added weight up >>>>>>>>>>>>>>>>>>>>>>>>>>> :  ");
+         //  Serial.println(" added weight up >>>>>>>>>>>>>>>>>>>>>>>>>>> :  ");
           allCS[curr_con_id].weight += 1.0;
       }
 

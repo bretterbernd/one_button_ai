@@ -83,7 +83,7 @@ int returnEdgeOfArray(int _e){
 void setup() {
 
    Serial.begin(115200);
-  pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
+   pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
  // mySerial.begin(9600); // initialize SoftwareSerial port
 
   //last_off_ts = millis();
@@ -131,7 +131,7 @@ void loop() {
          is_idle = true;
      
        // sortArrayByConnectionAmount();
-        // send_data_via_serial();
+         send_data_via_serial();
         
         //init_idle_visuals();
         init_direct_answer();

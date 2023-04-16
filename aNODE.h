@@ -28,14 +28,14 @@ struct aNODE{
         
         float rand_weight = random(weightsum);
 
-
+/*
           Serial.println("------------------------------");
         Serial.print(" weightsum: ");
         Serial.println(weightsum);  
          Serial.print(" randsum: ");
         Serial.println(rand_weight);   
 
-
+*/
 
         // Loop through the array, subtracting each element's weight from the random number
         // until the random number is less than or equal to zero
